@@ -17,3 +17,20 @@
   height: 200px;
   border-radius: 100%;
 }
+
+.counter-item {
+  border: 2px solid #ffa500;
+  border-radius: 16px;
+  padding: 1rem;
+  display: block;
+  gap: 2rem;
+  justify-content: center;
+  background: #fff8e1;
+  box-shadow: 0 2px 8px rgba(255, 165, 0, 0.08);
+  margin-bottom: 1rem;
+}
+
+.counter-item h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
