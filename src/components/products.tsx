@@ -1,19 +1,16 @@
 import { useState } from 'react';
-import { useEffect } from 'react';
+import useProducts from '../hooks/use-products';
 
 export default function Products() {
-    const [products, setProducts] = useState([]);
+
     const [checked, setChecked] = useState(false);
+    const { loading, error, products } = useProducts({ saleOnly: checked });
     const handleCheck = () => {
         setChecked((prev) => !prev);
     };
 
-    useEffect(() => {
-        const url = checked ? 'data/sale_products.json' : 'data/products.json';
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setProducts(data));
-    }, [checked]);
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error}</div>;
 
     return (
         <div>
