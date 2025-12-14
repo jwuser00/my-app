@@ -12,7 +12,7 @@ function AppProducts() {
       <div>
         <h2 className="text-3xl">AppProducts</h2>
         <h2 className="text-2xl">AppProducts</h2>
-        <h2 className="text-">AppProducts</h2>
+        <h2 className="text-red-900 text-8xl rounded-3xl bg-blue-500 bg-origin-padding">AppProducts</h2>
       </div>
     </div>
   );
